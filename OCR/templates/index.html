@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>OCR Text Extractor</h1>
+
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload & Extract</button>
+
+        <div class="output-container">
+            <div id="imageContainer">
+                <h2>Uploaded Image:</h2>
+                <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none;">
+            </div>
+
+            <div id="textContainer">
+                <h2>Extracted Text:</h2>
+                <textarea id="extractedText" rows="10" readonly></textarea>
+                <div class="download-buttons">
+                    <button onclick="downloadFile('txt')">Download TXT</button>
+                    <button onclick="downloadFile('pdf')">Download PDF</button>
+                    <button onclick="downloadFile('docx')">Download DOCX</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

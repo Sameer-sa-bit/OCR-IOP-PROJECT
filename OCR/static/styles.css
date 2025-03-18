@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("{{ url_for('static', filename='ocr-background.jpg') }}") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.output-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#imageContainer, #textContainer {
+    width: 48%;
+}
+
+img {
+    max-width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.download-buttons button {
+    margin: 5px;
+}
